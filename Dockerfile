@@ -2,8 +2,4 @@ FROM gozargah/marzban:latest
 
 USER root
 
-COPY start.sh /start.sh
-
-RUN chmod +x /start.sh
-
-ENTRYPOINT ["/start.sh"]
+COPY xray_config.json /var/lib/marzban/xray_config.json
