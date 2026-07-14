@@ -11,7 +11,8 @@ export XRAY_JSON=/code/xray_config.json
 
 export SQLALCHEMY_DATABASE_URL=sqlite:////code/marzban.db
 
-
 echo "Starting Marzban..."
 
-python3 main.py
+exec python3 -m uvicorn app.main:app \
+--host 0.0.0.0 \
+--port ${PORT:-8000}
