@@ -5,10 +5,10 @@ set -e
 export UVICORN_HOST=0.0.0.0
 export UVICORN_PORT=${PORT:-8000}
 
-export XRAY_JSON=${XRAY_JSON:-/var/lib/marzban/xray_config.json}
-
-echo "Starting Marzban on ${UVICORN_HOST}:${UVICORN_PORT}"
+export XRAY_JSON=${XRAY_JSON:-/etc/xray_config.json}
 
 cd /code
 
-python3 main.py --host 0.0.0.0 --port ${UVICORN_PORT}
+echo "Starting Marzban..."
+
+exec uvicorn app:app --host 0.0.0.0 --port ${UVICORN_PORT}
