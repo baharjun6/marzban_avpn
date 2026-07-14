@@ -4,7 +4,7 @@
   },
   "inbounds": [
     {
-      "tag": "VLESS WS",
+      "tag": "VLESS",
       "listen": "0.0.0.0",
       "port": 62050,
       "protocol": "vless",
