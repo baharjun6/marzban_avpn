@@ -4,7 +4,7 @@
   },
   "inbounds": [
     {
-      "tag": "VLESS",
+      "tag": "proxy-in",
       "listen": "0.0.0.0",
       "port": 62050,
       "protocol": "vless",
@@ -22,7 +22,8 @@
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "tag": "direct-out"
     }
   ]
 }
