@@ -2,9 +2,24 @@
   "log": {
     "loglevel": "warning"
   },
-
-  "inbounds": [],
-
+  "inbounds": [
+    {
+      "tag": "VLESS WS",
+      "listen": "0.0.0.0",
+      "port": 62050,
+      "protocol": "vless",
+      "settings": {
+        "clients": [],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/ray"
+        }
+      }
+    }
+  ],
   "outbounds": [
     {
       "protocol": "freedom",
